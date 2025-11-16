@@ -1,11 +1,9 @@
-// src/services/api.js
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8080", // backend URL
+  baseURL: "http://localhost:8080/api", // IMPORTANT → include /api
 });
 
-// Token irundha header-la add pannum
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
