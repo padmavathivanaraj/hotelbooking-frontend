@@ -10,7 +10,7 @@ export default function HotelsList() {
 
   const fetchHotels = async () => {
     try {
-      const res = await api.get("/api/hotels");
+      const res = await api.get("/hotels");
       setHotels(res.data);
       setError("");
     } catch (err) {
